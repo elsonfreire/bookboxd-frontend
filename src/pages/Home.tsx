@@ -1,3 +1,9 @@
+import { Header } from "../components/Header";
+
 export const Home = () => {
-  return <div className="">Home page</div>;
+  return (
+    <div className="min-h-screen bg-gray-800">
+      <Header />
+    </div>
+  );
 };

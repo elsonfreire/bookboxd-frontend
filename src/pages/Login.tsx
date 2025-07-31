@@ -25,7 +25,7 @@ export const Login = () => {
     <>
       <div className="min-h-screen flex items-center justify-center bg-slate-950 text-white">
         <form className="flex flex-col items-center justify-center gap-4 bg-gray-900 p-16 w-full min-h-screen sm:max-w-lg sm:rounded-2xl sm:min-h-0">
-          <h1 className="font-extrabold text-2xl mb-10">
+          <h1 className="font-extrabold text-2xl mb-8">
             {isLogin ? "Login to Bookboxd" : "Register to Bookboxd"}
           </h1>
 
