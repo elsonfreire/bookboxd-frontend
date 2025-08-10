@@ -2,6 +2,21 @@ import { MenuIcon } from "../assets/icons/MenuIcon";
 import { SearchIcon } from "../assets/icons/SearchIcon";
 import { navItems } from "../constants/navItems";
 
+const Navbar = () => {
+  return (
+    <ul className="hidden md:flex ml-auto gap-4">
+      {Object.keys(navItems).map((key) => (
+        <li
+          key={key}
+          className="content-center uppercase opacity-80 hover:opacity-100"
+        >
+          <a href={navItems[key]}>{key}</a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 type HeaderProps = {
   onMenuClick: () => void;
 };
@@ -21,18 +36,7 @@ export const Header = ({ onMenuClick }: HeaderProps) => {
           <a href="/" className="text-2xl md:text-3xl">
             Bookboxd
           </a>
-          <ul className="hidden md:flex ml-auto gap-4">
-            {Object.keys(navItems).map((key) => (
-              <li key={key} className="content-center">
-                <a
-                  href={navItems[key]}
-                  className="uppercase opacity-80 hover:opacity-100"
-                >
-                  {key}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <Navbar />
           <button
             className="ml-auto md:ml-0 cursor-pointer"
             onClick={handleSearchOpen}
