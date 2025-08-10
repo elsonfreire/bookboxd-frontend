@@ -7,13 +7,13 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 h-full shadow-lg bg-white p-32 z-30 ${
+        className={`fixed top-0 left-0 z-30 h-full bg-white p-32 shadow-lg ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-200`}
       ></div>
       {isOpen && (
         <div
-          className="fixed bg-black z-20 inset-0 opacity-10"
+          className="fixed inset-0 z-20 bg-black opacity-10"
           onClick={onClose}
         ></div>
       )}
