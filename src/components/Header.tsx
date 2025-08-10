@@ -1,18 +1,12 @@
 import { MenuIcon } from "../assets/icons/MenuIcon";
 import { SearchIcon } from "../assets/icons/SearchIcon";
+import { navItems } from "../constants/navItems";
 
 type HeaderProps = {
   onMenuClick: () => void;
 };
 
 export const Header = ({ onMenuClick }: HeaderProps) => {
-  const menuItems: Record<string, string> = {
-    Home: "/",
-    Books: "/books",
-    Search: "/search",
-    Reviews: "/reviews",
-  };
-
   const handleSearchOpen = () => {
     console.log("Open search");
   };
@@ -28,10 +22,10 @@ export const Header = ({ onMenuClick }: HeaderProps) => {
             Bookboxd
           </a>
           <ul className="hidden md:flex ml-auto gap-4">
-            {Object.keys(menuItems).map((key) => (
+            {Object.keys(navItems).map((key) => (
               <li key={key} className="content-center">
                 <a
-                  href={menuItems[key]}
+                  href={navItems[key]}
                   className="uppercase opacity-80 hover:opacity-100"
                 >
                   {key}

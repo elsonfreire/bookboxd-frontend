@@ -1,4 +1,5 @@
 import { MenuIcon } from "../assets/icons/MenuIcon";
+import { navItems as navItems } from "../constants/navItems";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -6,13 +7,6 @@ type SidebarProps = {
 };
 
 export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
-  const menuItems: Record<string, string> = {
-    Home: "/home",
-    Books: "/books",
-    Search: "/search",
-    Reviews: "/reviews",
-  };
-
   return (
     <>
       <div
@@ -21,10 +15,10 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         } transition-transform duration-200`}
       >
         <ul className="flex flex-col gap-4">
-          {Object.keys(menuItems).map((key) => (
+          {Object.keys(navItems).map((key) => (
             <li key={key} className="flex text-2xl gap-6">
               <MenuIcon />
-              <a href={menuItems[key]}>{key}</a>
+              <a href={navItems[key]}>{key}</a>
             </li>
           ))}
         </ul>
