@@ -12,7 +12,7 @@ export const Header = ({ onMenuClick }: HeaderProps) => {
 
   return (
     <>
-      <div className="flex bg-gray-900 p-6 w-full text-white font-bold text-xl gap-6">
+      <div className="flex w-full gap-6 bg-gray-900 p-6 text-xl font-bold text-white">
         <button className="cursor-pointer md:hidden" onClick={onMenuClick}>
           <MenuIcon size={28} />
         </button>
