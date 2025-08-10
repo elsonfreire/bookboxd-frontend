@@ -1,5 +1,5 @@
-import { MenuIcon } from "../assets/icons/MenuIcon";
-import { SearchIcon } from "../assets/icons/SearchIcon";
+import { MenuIcon } from "./icons/MenuIcon";
+import { SearchIcon } from "./icons/SearchIcon";
 import { navItems } from "../constants/navItems";
 
 const Navbar = () => {

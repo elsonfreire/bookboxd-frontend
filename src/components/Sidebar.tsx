@@ -1,4 +1,4 @@
-import { MenuIcon } from "../assets/icons/MenuIcon";
+import { MenuIcon } from "./icons/MenuIcon";
 import { navItems as navItems } from "../constants/navItems";
 
 type SidebarProps = {
