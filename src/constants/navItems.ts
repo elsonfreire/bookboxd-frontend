@@ -1,8 +1,6 @@
 import type { JSX } from "react";
 import type { IconProps } from "../components/icons/Icon";
-import { HomeIcon } from "../components/icons/HomeIcon";
-import { StarIcon } from "../components/icons/StarIcon";
-import { BookIcon } from "../components/icons/BookIcon";
+import { HomeIcon, BookIcon, StarIcon } from "../components/icons/index";
 
 type NavItem = {
   path: string;
