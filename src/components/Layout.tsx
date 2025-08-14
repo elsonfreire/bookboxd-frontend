@@ -11,8 +11,10 @@ export const Layout = () => {
       <Sidebar isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <div>
         <Header onMenuClick={() => setIsOpen(true)} />
-        <main className="min-h-screen bg-gray-800">
-          <Outlet />
+        <main className="min-h-screen bg-gray-800 md:p-20">
+          <div className="m-auto w-full md:w-4xl">
+            <Outlet />
+          </div>
         </main>
       </div>
     </>

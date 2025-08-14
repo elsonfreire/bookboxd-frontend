@@ -1,4 +1,3 @@
-import { MenuIcon } from "./icons/MenuIcon";
 import { navItems as navItems } from "../constants/navItems";
 
 type SidebarProps = {
@@ -15,12 +14,17 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         } transition-transform duration-200`}
       >
         <ul className="flex flex-col gap-4">
-          {Object.keys(navItems).map((key) => (
-            <li key={key} className="flex text-2xl gap-6">
-              <MenuIcon />
-              <a href={navItems[key]}>{key}</a>
-            </li>
-          ))}
+          {Object.keys(navItems).map((key) => {
+            const currentItem = navItems[key];
+            const Icon = currentItem.icon;
+
+            return (
+              <li key={key} className="flex text-2xl gap-6">
+                <Icon />
+                <a href={currentItem.path}>{key}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
       {isOpen && (
