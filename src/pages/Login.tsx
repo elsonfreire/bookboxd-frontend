@@ -22,9 +22,9 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950 text-white">
-      <form className="flex flex-col items-center justify-center gap-4 bg-gray-900 p-16 w-full min-h-screen sm:max-w-lg sm:rounded-2xl sm:min-h-0">
-        <h1 className="font-extrabold text-2xl mb-8">
+    <div className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
+      <form className="flex min-h-screen w-full flex-col items-center justify-center gap-4 bg-gray-900 p-16 sm:min-h-0 sm:max-w-lg sm:rounded-2xl">
+        <h1 className="mb-8 text-2xl font-extrabold">
           {isLogin ? "Login to Bookboxd" : "Register to Bookboxd"}
         </h1>
 
@@ -59,18 +59,18 @@ export const Login = () => {
 
         <button
           type="submit"
-          className="w-full p-3 bg-teal-200 rounded-md text-black cursor-pointer"
+          className="w-full cursor-pointer rounded-md bg-teal-200 p-3 text-black"
           onClick={handleSubmit}
         >
           {isLogin ? "Sign in" : "Sign up"}
         </button>
 
-        <div className="text-center text-sm mt-2">
+        <div className="mt-2 text-center text-sm">
           {isLogin
             ? "Don't have an account yet? "
             : "Already have an account? "}
           <button
-            className="font-bold hover:underline cursor-pointer"
+            className="cursor-pointer font-bold hover:underline"
             onClick={handleSwitchMode}
           >
             {isLogin ? "Register now." : "Login."}

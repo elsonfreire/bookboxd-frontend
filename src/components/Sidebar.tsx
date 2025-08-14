@@ -29,7 +29,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       </div>
       {isOpen && (
         <div
-          className="fixed bg-black z-20 inset-0 opacity-10"
+          className="fixed inset-0 z-20 bg-black opacity-10"
           onClick={onClose}
         ></div>
       )}
