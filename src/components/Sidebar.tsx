@@ -19,7 +19,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             const Icon = currentItem.icon;
 
             return (
-              <li key={key} className="flex text-2xl gap-6">
+              <li key={key} className="flex text-2xl items-center gap-6">
                 <Icon />
                 <a href={currentItem.path}>{key}</a>
               </li>

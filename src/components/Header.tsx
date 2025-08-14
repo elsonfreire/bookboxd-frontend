@@ -9,7 +9,7 @@ const Navbar = () => {
           key={key}
           className="content-center uppercase opacity-80 hover:opacity-100"
         >
-          <a href={navItems[key]}>{key}</a>
+          <a href={navItems[key].path}>{key}</a>
         </li>
       ))}
     </ul>
